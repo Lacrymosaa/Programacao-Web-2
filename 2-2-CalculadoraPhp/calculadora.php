@@ -2,6 +2,7 @@
 
 class Calculadora {
     private $res; // variável que armazena o resultado das operações
+    private $mem;
 
     public function __construct() {
         session_start();

@@ -79,25 +79,16 @@ require_once('calculadora.php');
             ?> <br>
             <?php
             echo 'Resultado: ' . $calculadora->getRes();
-            ?> <br>
-            <?php
-            // Mostra raiz quadrada
-            if ($operacao == 'raiz') {
-                echo 'Raiz quadrada: ' . $calculadora->getRes();
-            }
-
-            // Mostra último resultado
-            if ($operacao == 'desfaz') {
-                echo 'Último resultado: ' . $calculadora->desfaz();
-            }
-
         }
-      }
-      
-   
-
-?>
+    }
+            ?> <br>
 
     </form>
+    <br><br><h3> Como usar:</h3>
+    <p> Porcentagem: Usará o resultado da última operação <br>
+        Raiz Quadrada: Usará apenas o valor 1 <br>
+        Desfaz: Retorna o último resultado (não é necessário inserir valores) <br>
+        
+</p>
 </body>
 </html>
