@@ -5,14 +5,16 @@
         private $password = "password";
         private $database = "database_name";
         private $pdo;
+        private $message;
     
         public function __construct() {
             try {
                 $this->pdo = new PDO("mysql:host={$this->host};dbname={$this->database}", $this->username, $this->password);
                 $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 $this->pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+                $this->message = $this->getEstadoConexao();
             } catch (PDOException $e) {
-                die("Failed to connect to database: " . $e->getMessage());
+                $this->message = "Failed to connect to database: " . $e->getMessage();
             }
         }
     
@@ -34,6 +36,11 @@
             }
         }
         
+        public function showMessage() {
+            echo $this->message;
+        }
+        
+
         
     }
     
