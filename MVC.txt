@@ -1,0 +1,12 @@
+CRUD - MVC
+1 - Usuario interage com a pagina chamando uma função do Control
+2 - Controlador que contém as funções do model chama a função desejada pelo usuário
+3 - Model faz um requerimento do banco de dados
+4 - Banco de dados retorna o requerimento para o model
+5 - O Model retorna o requerimento para o retorno
+6 - O controlador pede a view a vizualização com o requerimento que foi enviado do BD até o controlador
+7 - A view retorna todo o código necessário na view para o controller
+
+Controller - controla a página, seus elementos e as chamadas de função de view e model
+View - carrega consigo todas as vizualizações em HTML e CSS que podem ser requeridas pelo controller
+Model - é responsavel pelo contato com o banco de dados
